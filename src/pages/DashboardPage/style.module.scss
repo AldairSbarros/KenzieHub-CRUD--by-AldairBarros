@@ -1,0 +1,63 @@
+.DashContainer{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // margin: auto;
+    // justify-content: space-between;
+}
+
+
+
+.dashBox{
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin-left: 330px;
+    // margin-right: 330px;
+    border-bottom: 1px solid var(--Grey-3);
+    width: 65%;
+    height: 150px;
+    margin: auto;
+}
+
+.userBox{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 330px;
+    margin-right: 330px;
+    border-bottom: 1px solid var(--Grey-3);
+    height: 150px;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 330px;
+    margin-right: 330px;
+    margin-top: 50px;
+    color: var(--Grey-2);
+    gap: 30px;
+    
+
+}
+
+h4{
+    font-family: var(--font-family);
+    font-size: 12px;
+    color: var(--Grey-1);
+}
+
+h1{
+    margin-right: 480px;
+   
+
+    
+}

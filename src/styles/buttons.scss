@@ -1,0 +1,89 @@
+.primario {
+  width: 100%;
+  height: 3rem;
+  display: inline-flex;
+  padding: 0px 1.3959rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6345rem;
+  margin-bottom: 20px;
+  color: var(--Grey-0);
+  border-radius: var(--border-radius-1);
+  border: 0.0761rem solid var(--color-primary);
+  background: var(--color-primary);
+
+  &.small{
+    width: 4.1875rem;
+    height: 2.5rem;
+  }
+}
+
+.primario:hover {
+  
+  border: 0.0761rem solid var(--color-primary-focus);
+  background: var(--color-primary-focus);
+
+  &.small{
+    width: 4.1875rem;
+    height: 2.5rem;
+  }
+}
+
+
+.primario-negativo {
+    width: 100%;
+    height: 3rem;
+    display: inline-flex;
+    padding: 0px 1.3959rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6345rem;
+    border-radius: var(--border-radius-1);
+    color: var(--Grey-0);
+    
+  
+    border-radius: 0.2538rem;
+    border: 0.0761rem solid var(--color-primary-negative);
+    background: var(--color-primary-negative);
+  
+    &.small{
+      width: 4.1875rem;
+      height: 2.5rem;
+    }
+  }
+  
+ 
+  .desabilitado {
+    width: 100%;
+    height: 3rem;
+    display: inline-flex;
+    padding: 0px 1.3959rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6345rem;
+    color: var(--Grey-0);
+    margin-top: 20px;
+    margin-right: -1040px;
+    
+  
+    border-radius: var(--border-radius-1);
+    border: 0.0761rem solid var(--Grey-);
+    background: var(--Grey-3);
+  
+    &.small{
+      width: 4.1875rem;
+      height: 2.5rem;
+    }
+  }
+  
+  .desabilitado:hover {
+    
+    border: 0.0761rem solid var(--Grey-2);
+    background: var(--Grey-1);
+  
+    &.small{
+      width: 4.1875rem;
+      height: 2.5rem;
+    }
+  }
+  
