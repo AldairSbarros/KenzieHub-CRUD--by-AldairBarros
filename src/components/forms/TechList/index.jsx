@@ -1,13 +1,16 @@
 import { useContext } from "react"
+import { UserContext } from "../../../providers/UserContext";
+import { TechContext } from "../../../providers/TechContext";
 
 
 export const TechList = () => {
-    const { techList, setTechList , deleteTech, setEditingTech} = useContext(TechContext);
-
+    const { user } = useContext(UserContext);
+    console.log(user);
+    const { deleteTech, setEditingTech} = useContext(TechContext);
     return(
 
         <ul>
-            {techList.map((tech) => (
+            {user.techs.map((tech) => (
 
             <li>
                 <h2>{tech.title}</h2>

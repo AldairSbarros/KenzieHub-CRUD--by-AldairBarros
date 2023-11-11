@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import api from "../../services";
+import api from "../../services/index";
 
 
 export const TechContext = createContext({});
@@ -13,6 +13,8 @@ export const TechProvider = ({ children }) => {
             try {
                 const { data } = await api.get("/sessions");
                 setTechList(data);
+
+                console.log(data);
             } catch (error) {
                 console.log(error);
             }

@@ -1,0 +1,36 @@
+.container {
+
+    // width: 100%;
+
+    background-color: var(--Grey-2);
+
+
+
+
+.headerModalBox{
+
+    width: 400px;
+    height: 50px;
+    display: flex;
+    // flex-direction: row;
+    border: 1px fixed red;
+    background-color: var(--Grey-3);
+}
+
+.headerCard{
+    // width: 400px;
+    display: flex;
+    flex-direction: center;
+
+    color: var(--Grey-0);
+    font-size: 20px;
+    font-family: var(--font-family);
+}
+.btn{
+    margin-left: -270px;
+    background-color: var(--Grey-3);
+    border: none;
+    color: var(--Grey-0);
+    font-size: 22px;
+}
+}

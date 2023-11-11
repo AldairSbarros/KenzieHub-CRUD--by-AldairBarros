@@ -27,8 +27,8 @@ export const RoutesMain = () => {
             <Route element={<PublicRoutes />}/>
                 <Route path="/register" element={<RegisterPage />}/>
                 <Route path="/" element={<LoginPage setUser={setUser} />}/>
-                <Route/>
                 <Route path="/user" element={<DashboardPage user={user} userLogout={userLogout}/> }/>
+                <Route/>
             <Route element={<PrivateRoutes/>}>
                 <Route path="*" element={<NotFound />} />
             </Route>

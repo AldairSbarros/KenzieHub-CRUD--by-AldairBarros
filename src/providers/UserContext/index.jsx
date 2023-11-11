@@ -26,6 +26,7 @@ export const UserProvider = ({children}) => {
     const loginSubmit = async (payload) => {
         try {
             const {data} = await api.post("/sessions", payload);
+            console.log(data);
             setToken(data.token);
             localStorage.setItem("@TOKEN", data.token);
             setUser(data.user);
@@ -68,7 +69,7 @@ export const UserProvider = ({children}) => {
 
 
     return(
-        <UserContext.Provider value={{loginSubmit, registerUser}}>
+        <UserContext.Provider value={{loginSubmit, registerUser, user}}>
             {children}
             <ToastContainer/>
         </UserContext.Provider>
