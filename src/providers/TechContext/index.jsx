@@ -26,14 +26,14 @@ export const TechProvider = ({ children }) => {
   }, []);
 
   const createNewTech = async (formData) => {
-    try {
-      const { data } = await api.post("/users/techs", formData, {
-        headers: {
-            Authorization: `Bearer ${token}`}
-        });
-        console.log(token)
-    //   console.log(data);
-      setTechList([...techList, data]);
+      try {
+          const { data } = await api.post("/users/techs", formData, {
+              headers: {
+                  Authorization: `Bearer ${token}`}
+                });
+                
+                setTechList([...techList, data]);
+        console.log(data);
       toast.sucess("Tecnologia cadastrada com sucesso!");
     } catch (error) {
       console.log(error);
