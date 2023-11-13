@@ -56,8 +56,8 @@ export const DashboardPage = ( {userLogout}) => {
 
                 
                 <div className={style.content}>
-                    <h1>Tecnologias</h1>
-                    <FaPlusSquare onClick={() => setIsOpen(true)}/>
+                    <h1 className="title1">Tecnologias</h1>
+                    <FaPlusSquare size={30} style={{ color: 'white', marginRight: '-650px' }} onClick={() => setIsOpen(true)}/>
                     {isOpen ? <CreateTechModal setIsOpen={setIsOpen} /> : null}
 
                     {/* <TechCard/> */}

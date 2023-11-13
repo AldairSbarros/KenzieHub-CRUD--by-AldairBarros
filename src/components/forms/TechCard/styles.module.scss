@@ -12,17 +12,22 @@
     width: 400px;
     height: 50px;
     display: flex;
-    // flex-direction: row;
+    flex-direction: row;
     border: 1px fixed red;
-    background-color: var(--Grey-3);
+    background-color: var(--Grey-4);
 }
 
 .headerCard{
-    // width: 400px;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
     display: flex;
     flex-direction: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
 
-    color: var(--Grey-0);
+    color: white;
     font-size: 20px;
     font-family: var(--font-family);
 }
@@ -32,5 +37,7 @@
     border: none;
     color: var(--Grey-0);
     font-size: 22px;
+    
+    margin-left: 10px;
 }
 }

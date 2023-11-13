@@ -5,7 +5,7 @@ import { TechContext } from "../../../providers/TechContext";
 
 export const TechList = () => {
     const { user } = useContext(UserContext);
-    console.log(user);
+    
     const { deleteTech, setEditingTech} = useContext(TechContext);
     return(
 
@@ -16,7 +16,7 @@ export const TechList = () => {
                 <h2>{tech.title}</h2>
                 <p>{tech.status}</p>
                 <button onClick={() => deleteTech(tech.id)}>Editar</button>
-                <button onClick={() => setEditingTech(tech)}>Excluir</button>
+                <button onClick={() => setEditingTech(tech.i)}>Excluir</button>
             </li>
             ))}   
             </ul>

@@ -26,6 +26,8 @@ export const TechProvider = ({ children }) => {
         try {
             const {data} = await api.post("/users/techs", formData);
             setTechList([...techList, data]);
+            // console.log(techList);
+            alert("Tecnologia cadastrada com sucesso!");
         } catch (error) {
             console.log(error);
         

@@ -26,7 +26,7 @@ export const UserProvider = ({children}) => {
     const loginSubmit = async (payload) => {
         try {
             const {data} = await api.post("/sessions", payload);
-            console.log(data);
+           
             setToken(data.token);
             localStorage.setItem("@TOKEN", data.token);
             setUser(data.user);
