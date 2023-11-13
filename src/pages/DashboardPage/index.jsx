@@ -3,7 +3,6 @@ import style from "../../pages/DashboardPage/style.module.scss"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useContext, useEffect, useState } from 'react';
-import { TechCard } from "../../components/forms/TechCard";
 import { TechList } from "../../components/forms/TechList";
 import {FaPlusSquare} from "react-icons/fa";
 import { CreateTechModal } from "../../components/Modais/CreateTechModal";
@@ -16,6 +15,7 @@ export const DashboardPage = ( {userLogout}) => {
     const [course, setCourse] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const { editingTech} = useContext(TechContext);
+    const { techList} = useContext(TechContext);
 
     useEffect(() => {
         const storedUser = JSON.parse(localStorage.getItem("@USER"));
@@ -57,13 +57,16 @@ export const DashboardPage = ( {userLogout}) => {
                 
                 <div className={style.content}>
                     <h1 className="title1">Tecnologias</h1>
-                    <FaPlusSquare size={30} style={{ color: 'white', marginRight: '-650px' }} onClick={() => setIsOpen(true)}/>
+                    <FaPlusSquare size={30} style={{ color: 'white',  }} onClick={() => setIsOpen(true)}/>
                     {isOpen ? <CreateTechModal setIsOpen={setIsOpen} /> : null}
 
-                    {/* <TechCard/> */}
-                    <TechList/>
-                   
                 </div>
+
+                 <div className={style.list} >
+                    <TechList techs={techList} />
+
+                </div>
+                   
 
 
             </div>

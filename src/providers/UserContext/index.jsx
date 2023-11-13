@@ -69,7 +69,7 @@ export const UserProvider = ({children}) => {
 
 
     return(
-        <UserContext.Provider value={{loginSubmit, registerUser, user}}>
+        <UserContext.Provider value={{loginSubmit, registerUser, user, token}}>
             {children}
             <ToastContainer/>
         </UserContext.Provider>
