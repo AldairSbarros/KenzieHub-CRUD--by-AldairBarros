@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../../providers/UserContext";
 import { TechContext } from "../../../providers/TechContext";
 import style from "../TechList/style.module.scss";
@@ -10,9 +10,11 @@ export const TechList = ({ techs }) => {
   const { user } = useContext(UserContext);
   const [ isOpenEdit, setIsOpenEdit] = useState(false);
   const { deleteTech, setEditingTech, editingTech } = useContext(TechContext);
+
+
   return (
     <>
-    {editingTech && <EditTechModal setIsOpenEdit={setIsOpenEdit} />} {/* Renderize o EditTechModal condicionalmente */}
+    {editingTech && <EditTechModal  setIsOpenEdit={setIsOpenEdit} />}
     <ul className={style.listTech}>
       {user.techs.map((tech) => (
         <li className={style.listTechItem} key={tech.id}>
@@ -23,7 +25,7 @@ export const TechList = ({ techs }) => {
             <p className="paragraph">{tech.status}</p>
             <button
               className={style.icons}
-              onClick={() => {setEditingTech(tech.id); ;
+              onClick={() => {setEditingTech(tech); 
                 console.log(tech.id);}}
                 >
               <img src={penedit}></img>
