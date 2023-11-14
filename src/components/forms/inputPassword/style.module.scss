@@ -1,39 +1,38 @@
 .inputBox {
-    .inputGrid {
-      position: relative;
-    }
-  
-    input {
-      margin-top: 9.6px;
-      width: 90%;
-      height: 48px;
-      font-family: var(--font-primary);
-      font-size: 1.125rem;
-      font-weight: 400;
-      color: var(--color-black);
-      padding: 0 20px;
-      height: 3.5rem;
-      background: var(--Grey-3);
-      border-radius: var(--border-radius-1);
-      border: none;
-  
-      &:disabled {
-        opacity: 0.5;
-      }
-    }
-  
-    p {
-      margin-top: 0.5rem;
-      color: red;
-    }
-  
-    button {
-      position: absolute;
-      top: 1.2rem;
-      right: 10px;
-      font-size: 1.5rem;
-      background-color: var(--Grey-3);
-      border: none;
+  .inputGrid {
+    position: relative;
+  }
+
+  input {
+    margin-top: 9.6px;
+    width: 90%;
+    height: 48px;
+    font-family: var(--font-primary);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-black);
+    padding: 0 20px;
+    height: 3.5rem;
+    background: var(--Grey-3);
+    border-radius: var(--border-radius-1);
+    border: none;
+
+    &:disabled {
+      opacity: 0.5;
     }
   }
-  
+
+  p {
+    margin-top: 0.5rem;
+    color: red;
+  }
+
+  button {
+    position: absolute;
+    top: 1.2rem;
+    right: 10px;
+    font-size: 1.5rem;
+    background-color: var(--Grey-3);
+    border: none;
+  }
+}

@@ -26,14 +26,15 @@ export const TechProvider = ({ children }) => {
   }, []);
 
   const createNewTech = async (formData) => {
-      try {
-          const { data } = await api.post("/users/techs", formData, {
-              headers: {
-                  Authorization: `Bearer ${token}`}
-                });
-                
-                setTechList([...techList, data]);
-        console.log(data);
+    try {
+      const { data } = await api.post("/users/techs", formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      setTechList([...techList, data]);
+      console.log(data);
       toast.sucess("Tecnologia cadastrada com sucesso!");
     } catch (error) {
       console.log(error);
@@ -42,7 +43,13 @@ export const TechProvider = ({ children }) => {
 
   const deleteTech = async (deletingId) => {
     try {
-      await api.delete(`/users/techs/${deletingId}`);
+      await api.delete(`/users/techs/${deletingId}`),
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        };
       const newTechList = techList.filter((tech) => tech.id !== deletingId);
       setTechList(newTechList);
     } catch (error) {
@@ -54,7 +61,12 @@ export const TechProvider = ({ children }) => {
     try {
       const { data } = await api.patch(
         `/users/techs/${editingTech.id}`,
-        formData
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       const newTechList = techList.map((tech) => {
         if (tech.id === editingTech.id) {
@@ -81,7 +93,7 @@ export const TechProvider = ({ children }) => {
       }}
     >
       {children}
-      <ToastContainer/>
+      <ToastContainer />
     </TechContext.Provider>
   );
 };

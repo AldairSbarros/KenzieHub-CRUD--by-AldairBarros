@@ -5,19 +5,19 @@ import Input from "../../../components/forms/input";
 import { TechContext } from "../../../providers/TechContext";
 import styles from "../TechCard/styles.module.scss";
 
-export const TechCard = () => {
-  const { register, handleSubmit, setIsOpen } = useForm();
+export const TechCardEdit = () => {
+  const { register, handleSubmit, setIsOpenEdit } = useForm();
 
-  const { createNewTech } = useContext(TechContext);
-  const [newTech, setNewTech] = useState({ title: "", status: "" });
+  const { editTech } = useContext(TechContext);
+  const [editingTech, setEditingTech] = useState({ title: "", status: "" });
 
   const submit = (data) => {
-    createNewTech(data);
+    editTech(data);
   };
   return (
-    <div className={styles.container}>
+    <div className={styles.container1}>
       <form onSubmit={handleSubmit(submit)}>
-        <h1 className={styles.headerCard}>Cadastrar Tecnologias</h1>
+        <h1 className={styles.headerCard1}>Tecnologia Detalhes</h1>
 
         <Input
           type="text"
@@ -29,7 +29,7 @@ export const TechCard = () => {
         <label>Selcionar status</label>
         <select
           type="text"
-          className={styles.statusTech}
+          className={styles.statusTech1}
           name="status"
           {...register("status", { required: true })}
         >
@@ -38,7 +38,7 @@ export const TechCard = () => {
           <option value="Avançado">Avançado</option>
         </select>
         <button type="submit" className="primario">
-          Cadastrar Tecnologia
+          Salvar alterações
         </button>
       </form>
     </div>

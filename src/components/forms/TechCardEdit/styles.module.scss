@@ -1,8 +1,9 @@
-.container {
+.container1 {
+  width: 100%;
   background-color: var(--Grey-2);
 }
 
-.headerModalBox {
+.headerModalBox1 {
   width: 400px;
   height: 50px;
   display: flex;
@@ -11,7 +12,7 @@
   background-color: var(--Grey-4);
 }
 
-.headerCard {
+.headerCard1 {
   display: flex;
   flex-direction: row;
   width: 400px;
@@ -24,7 +25,7 @@
   font-family: var(--font-family);
 }
 
-.btn {
+.btn1 {
   margin-left: -270px;
   background-color: var(--Grey-3);
   border: none;

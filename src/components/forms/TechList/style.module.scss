@@ -7,7 +7,7 @@
   margin: auto;
   background-color: #212529;
   padding: 20px;
-  border-radius: var(--border-radius-1);
+  border-radius: var(--border-radius-2);
   gap: 20px;
 
   .listTechItem {
@@ -17,9 +17,9 @@
     // align-items: center;
     margin: auto;
     justify-content: space-between;
-    background-color: var(--Grey-4) ;
+    background-color: var(--Grey-4);
     padding: 20px;
-    border-radius: var(--border-radius-1);
+    border-radius: var(--border-radius-2);
   }
 
   .techComponent {
