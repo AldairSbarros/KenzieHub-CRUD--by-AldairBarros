@@ -1,3 +1,5 @@
+
+
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../../providers/UserContext";
 import { TechContext } from "../../../providers/TechContext";
@@ -11,12 +13,21 @@ export const TechList = ({ techs }) => {
   const [ isOpenEdit, setIsOpenEdit] = useState(false);
   const { deleteTech, setEditingTech, editingTech } = useContext(TechContext);
 
+  
+  const [techList, setTechList] = useState(user.techs);
+
+  
+  const handleDeleteTech = (techId) => {
+    deleteTech(techId);
+    
+    setTechList(techList.filter(tech => tech.id !== techId));
+  }
 
   return (
     <>
     {editingTech && <EditTechModal  setIsOpenEdit={setIsOpenEdit} />}
     <ul className={style.listTech}>
-      {user.techs.map((tech) => (
+      {techList.map((tech) => (
         <li className={style.listTechItem} key={tech.id}>
           <div className={style.techTitle}>
             <h2 className="title1">{tech.title}</h2>
@@ -30,7 +41,7 @@ export const TechList = ({ techs }) => {
                 >
               <img src={penedit}></img>
             </button>
-            <button className={style.icons} onClick={() => deleteTech(tech.id)}>
+            <button className={style.icons} onClick={() => handleDeleteTech(tech.id)}>
               {" "}
               <img src={deleticon} alt="" />{" "}
             </button>
