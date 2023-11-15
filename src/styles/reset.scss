@@ -50,3 +50,18 @@ table {
 html{
 	background-color: var(--Grey-4);
 }
+
+
+select {
+    display: block;
+    width: 100%;
+    height: 48px;
+    background-color: var(--Grey-3);
+    border-radius: var(--border-radius-1);
+    border: none;
+    color: var(--Grey-1);
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }

@@ -11,16 +11,16 @@ import { EditTechModal } from "../../Modais/EditTechModal";
 export const TechList = ({ techs }) => {
   const { user } = useContext(UserContext);
   const [ isOpenEdit, setIsOpenEdit] = useState(false);
-  const { deleteTech, setEditingTech, editingTech } = useContext(TechContext);
+  const { deleteTech, setEditingTech, editingTech, techList } = useContext(TechContext);
 
   
-  const [techList, setTechList] = useState(user.techs);
+  
 
   
   const handleDeleteTech = (techId) => {
     deleteTech(techId);
     
-    setTechList(techList.filter(tech => tech.id !== techId));
+   
   }
 
   return (

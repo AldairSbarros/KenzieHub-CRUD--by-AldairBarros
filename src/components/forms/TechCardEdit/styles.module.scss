@@ -1,8 +1,8 @@
 .container1 {
   width: 100%;
   background-color: var(--Grey-2);
-}
 
+}
 .headerModalBox1 {
   width: 400px;
   height: 50px;
@@ -33,3 +33,18 @@
   font-size: 22px;
   margin-left: 10px;
 }
+
+.statusTech1{
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: var(--Grey-3);
+  border-radius: var(--border-radius-1);
+  border: none;
+  color: var(--Grey-1);
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+

@@ -10,6 +10,7 @@ export const UserContext =createContext({})
 export const UserProvider = ({children}) => {  
 
     const [token, setToken] = useState(null);
+    const [techList, setTechList] = useState([]);
 
     useEffect(() => {
         const bearerToken = localStorage.getItem("@TOKEN")
@@ -26,10 +27,11 @@ export const UserProvider = ({children}) => {
     const loginSubmit = async (payload) => {
         try {
             const {data} = await api.post("/sessions", payload);
-           
+           console.log(data);
             setToken(data.token);
             localStorage.setItem("@TOKEN", data.token);
             setUser(data.user);
+            setTechList(data.user.techs)
             
             localStorage.setItem("@USER", JSON.stringify(data.user));
             
@@ -69,7 +71,7 @@ export const UserProvider = ({children}) => {
 
 
     return(
-        <UserContext.Provider value={{loginSubmit, registerUser, user, token}}>
+        <UserContext.Provider value={{loginSubmit, registerUser, user, token, techList, setTechList}}>
             {children}
             <ToastContainer/>
         </UserContext.Provider>

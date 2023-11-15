@@ -8,17 +8,17 @@ export const EditTechModal = ({ children, isOpenEdit, setIsOpenEdit }) => {
   const { register, handleSubmit, setValue } = useForm();
   const { editingTech, editTech } = useContext(TechContext);
 
-  // useEffect(() => {
-  //   setValue("title", editingTech.title);
-  //   setValue("status", editingTech.status);
-  //   console.log(editingTech);
-  // }, [editingTech, setValue]);
+  useEffect(() => {
+    setValue("title", editingTech.title);
+    setValue("status", editingTech.status);
+    console.log(editingTech);
+  }, [editingTech, setValue]);
 
   const submit = (formData) => {
     editTech(formData);
-    setIsOpenEdit(true);
+    setIsOpenEdit(false);
   };
-  // if (isOpenEdit) {
+  
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modalBox}>
@@ -33,5 +33,6 @@ export const EditTechModal = ({ children, isOpenEdit, setIsOpenEdit }) => {
     </div>
   );
 }
-// return null;
-// };
+
+
+
