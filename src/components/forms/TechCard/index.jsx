@@ -1,19 +1,20 @@
-import { useState } from "react";
+
+
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Input from "../../../components/forms/input";
 import { TechContext } from "../../../providers/TechContext";
 import styles from "../TechCard/styles.module.scss";
 
-export const TechCard = () => {
-  const { register, handleSubmit, setIsOpen } = useForm();
-
+export const TechCard = ({ setIsOpen }) => {
+  const { register, handleSubmit } = useForm();
   const { createNewTech } = useContext(TechContext);
-  const [newTech, setNewTech] = useState({ title: "", status: "" });
 
-  const submit = (data) => {
-    createNewTech(data);
+  const submit = async (data) => {
+    await createNewTech(data);
+    setIsOpen(false); // Fecha o modal após a tecnologia ser cadastrada
   };
+
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit(submit)}>
@@ -26,7 +27,7 @@ export const TechCard = () => {
           className=""
           {...register("title", { required: true })}
         />
-        <label>Selcionar status</label>
+        <label>Selecionar status</label>
         <select
           type="text"
           className={styles.statusTech}
