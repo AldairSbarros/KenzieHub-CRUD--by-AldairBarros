@@ -12,7 +12,7 @@ export const TechCard = ({ setIsOpen }) => {
 
   const submit = async (data) => {
     await createNewTech(data);
-    setIsOpen(false); // Fecha o modal após a tecnologia ser cadastrada
+    setIsOpen(false); 
   };
 
   return (
